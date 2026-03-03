@@ -95,7 +95,7 @@
 }*/
 
 
-public class BannerApp{
+public class OopsBannerApp {
 
  public static String[] getOPattern(){
 	 return new String[] {
