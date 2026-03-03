@@ -32,24 +32,41 @@
 }
 */
 public class OopsBannerApp {
-
     public static void main(String[] args) {
+        char[][] O = {
+            {' ', '*', '*', '*', ' '},
+            {'*', ' ', ' ', ' ', '*'},
+            {'*', ' ', ' ', ' ', '*'},
+            {'*', ' ', ' ', ' ', '*'},
+            {' ', '*', '*', '*', ' '}
+        };
 
-    
-        String[] banner = new String[7];
+        char[][] P = {
+            {'*', '*', '*', '*', ' '},
+            {'*', ' ', ' ', ' ', '*'},
+            {'*', '*', '*', '*', ' '},
+            {'*', ' ', ' ', ' ', ' '},
+            {'*', ' ', ' ', ' ', ' '}
+        };
 
-    
-        banner[0] = String.join("", "      ***      ***      *****       ***** ");
-        banner[1] = String.join("", "     ** **    ** **    **   **    **      ");
-        banner[2] = String.join("", "    **   **  **   **   **   **   **       ");
-        banner[3] = String.join("", "    **   **  **   **   *****      ***     ");
-        banner[4] = String.join("", "    **   **  **   **   **            **   ");
-        banner[5] = String.join("", "     ** **    ** **    **             **  ");
-        banner[6] = String.join("", "      ***      ***     **        *****    ");
+        char[][] S = {
+            {' ', '*', '*', '*', '*'},
+            {'*', ' ', ' ', ' ', ' '},
+            {' ', '*', '*', '*', ' '},
+            {' ', ' ', ' ', ' ', '*'},
+            {'*', '*', '*', '*', ' '}
+        };
 
-        
-        for (String line : banner) {
-            System.out.println(line);
+        char[][][] letters = {O, O, P, S};
+
+        for (int i = 0; i < 5; i++) {
+            for (int l = 0; l < letters.length; l++) {
+                for (int j = 0; j < 5; j++) {
+                    System.out.print(letters[l][i][j] + " ");
+                }
+                System.out.print("  ");
+            }
+            System.out.println();
         }
     }
 }
