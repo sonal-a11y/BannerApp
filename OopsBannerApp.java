@@ -31,7 +31,30 @@
     }
 }
 */
-public class OopsBannerApp {
+
+ /*public class OopsBannerApp {
+
+    public static void main(String[] args) {
+
+    
+        String[] banner = new String[7];
+
+    
+        banner[0] = String.join("", "      ***      ***      *****       ***** ");
+        banner[1] = String.join("", "     ** **    ** **    **   **    **      ");
+        banner[2] = String.join("", "    **   **  **   **   **   **   **       ");
+        banner[3] = String.join("", "    **   **  **   **   *****      ***     ");
+        banner[4] = String.join("", "    **   **  **   **   **            **   ");
+        banner[5] = String.join("", "     ** **    ** **    **             **  ");
+        banner[6] = String.join("", "      ***      ***     **        *****    ");
+
+        
+        for (String line : banner) {
+            System.out.println(line);
+        }
+    }
+*/
+/*public class OopsBannerApp {
     public static void main(String[] args) {
         char[][] O = {
             {' ', '*', '*', '*', ' '},
@@ -69,4 +92,50 @@ public class OopsBannerApp {
             System.out.println();
         }
     }
+}*/
+
+
+public class BannerApp{
+
+ public static String[] getOPattern(){
+	 return new String[] {
+		 "     ***     ",
+         " **     **   ", 
+         "**        ** ", 
+         "**        ** ", 
+         "**        ** ", 
+         " **      **  ", 
+	     "   ***       " };
+ }
+ public static String[] getPPattern() {
+	 return new String[] {
+		  " *******    " ,
+          " *      *   " , 
+          " *      *   " ,
+          " *******    " , 
+          " *          " , 
+	      " *          " , 
+		  " *          "};
+ }
+ public static String[] getSPattern() {
+	 return new String[] {
+		  "   *****   " , 
+          " *         " ,
+          " *         "  ,
+          "   *****   "  ,
+          "         * "  ,
+          "         * "  ,
+          "  ******   "  ,
+            };
+ }
+ public static void main(String[] args) {
+	 String[] oPattern = getOPattern();
+	 String[] pPattern = getPPattern();
+     String[] SPattern = getSPattern(); 
+	 
+ for (int i = 0; i < oPattern.length; i++) {
+	 System.out.println (oPattern[i] + " " +oPattern[i]+" "+pPattern[i]+" "+SPattern[i]);
+        }
+     }
 }
+
